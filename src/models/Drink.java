@@ -9,12 +9,34 @@ public class Drink {
         setSize(size);
     }
 
+    public double getCost(){
+        if(getSize() == 1){
+            return 2.5;
+        }
+        else if(getSize() == 2){
+            return 3.5;
+        } else if(getSize() == 3){
+            return 4.5;
+        } else {
+            return -1;
+        }
+    }
+
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(!name.isEmpty()){
+            if(Character.isUpperCase(name.charAt(0))) {
+                this.name = name;
+            } else {
+                throw new IllegalArgumentException("First letter must be an upper case");
+            }
+        } else {
+            throw new IllegalArgumentException("Name cannot be empty");
+        }
+
     }
 
     public int getSize() {
@@ -22,6 +44,9 @@ public class Drink {
     }
 
     public void setSize(int size) {
-        this.size = size;
+        if(size == 1 || size == 2 || size == 3)
+            this.size = size;
+        else
+            throw new IllegalArgumentException("Size must be 1, 2, or 3");
     }
 }

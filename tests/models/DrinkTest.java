@@ -11,7 +11,7 @@ class DrinkTest {
 
     @BeforeEach
     void setUp() {
-        drink = new Drink("Iced Caffe Americano", 1);
+        drink = new Drink("Iced Americano", 1);
     }
 
     @Test
@@ -32,6 +32,12 @@ class DrinkTest {
     }
 
     @Test
+    void setNameInvalidLowerCase() {
+        assertThrows(IllegalArgumentException.class, ()->
+                drink.setName("americano"));
+    }
+
+    @Test
     void getSize() {
         drink.getSize();
     }
@@ -48,9 +54,9 @@ class DrinkTest {
                 drink.setSize(4));
     }
 
-//    @Test
-//    void getCost() {
-//        drink.setSize(1);
-//        assertEquals(2.5, drink.getCost());
-//    }
+    @Test
+    void getCost() {
+        drink.setSize(1);
+        assertEquals(2.5, drink.getCost());
+    }
 }
