@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import models.Coffee;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,13 +22,29 @@ public class CreateCoffeeViewController implements Initializable {
     private ChoiceBox<String> sizeChoiceBox;
 
     @FXML
-    private ChoiceBox<?> hotColdChoiceBox;
+    private ChoiceBox<String> hotColdChoiceBox;
 
     @FXML
-    private ChoiceBox<?> sugarChoiceBox;
+    private ChoiceBox<String> sugarChoiceBox;
 
     @FXML
-    private ChoiceBox<?> creamChoiceBox;
+    private ChoiceBox<String> creamChoiceBox;
+
+    @FXML
+    private void submitCoffee(){
+        Coffee newCoffee = new Coffee(coffeeNameTextField.getText(),
+                convertSizeValue(sizeChoiceBox.getValue()),
+                true,
+                true,
+                2,
+                2);
+        System.out.println(newCoffee);
+    }
+
+//    decafCheckBox.getText(),
+//            hotColdChoiceBox.getValue(),
+//            sugarChoiceBox.getValue(),
+//            creamChoiceBox.getItems());
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -35,5 +52,17 @@ public class CreateCoffeeViewController implements Initializable {
         sizeChoiceBox.getItems().add("Medium");
         sizeChoiceBox.getItems().add("Large");
     }
+
+    private int convertSizeValue(String size){
+        int numOfSize = 0;
+        if(sizeChoiceBox.getValue() == "Small")
+            numOfSize = 1;
+        if(sizeChoiceBox.getValue() == "Medium")
+            numOfSize = 2;
+        if(sizeChoiceBox.getValue() == "Large")
+            numOfSize = 3;
+        return numOfSize;
+    }
+
 
 }

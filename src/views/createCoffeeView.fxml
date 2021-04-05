@@ -69,13 +69,13 @@
                   </Label>
                   <TextField fx:id="coffeeNameTextField" promptText="Enter Coffee Name" GridPane.columnIndex="1" />
                   <CheckBox fx:id="decafCheckBox" mnemonicParsing="false" text="Yes" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <ChoiceBox fx:id="sizeChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <ChoiceBox fx:id="sizeChoiceBox" nodeOrientation="LEFT_TO_RIGHT" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <ChoiceBox fx:id="hotColdChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <ChoiceBox fx:id="sugarChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                   <ChoiceBox fx:id="creamChoiceBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
-            <Button mnemonicParsing="false" prefHeight="1.0" prefWidth="104.0" text="Submit">
+            <Button mnemonicParsing="false" onAction="#submitCoffee" prefHeight="1.0" prefWidth="104.0" text="Submit">
                <font>
                   <Font name="Calibri" size="18.0" />
                </font>
