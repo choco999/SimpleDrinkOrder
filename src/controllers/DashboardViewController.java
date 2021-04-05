@@ -34,7 +34,10 @@ public class DashboardViewController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         coffeeListView.getItems().addAll(DBUtility.getCoffeeFromDB());
+        coffeeLabel.setText(String.format("Coffee: %d", coffeeListView.getItems().size()));
+
         juiceListView.getItems().addAll(DBUtility.getJuiceFromDB());
+        juiceLabel.setText(String.format("Juice: %d",juiceListView.getItems().size()));
     }
 
 
