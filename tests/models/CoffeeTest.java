@@ -15,30 +15,15 @@ class CoffeeTest {
     }
 
     @Test
-    void isHot() {
-        coffee.isHot();
-    }
-
-    @Test
     void setHot() {
         coffee.setHot(true);
         assertTrue(coffee.isHot());
     }
 
     @Test
-    void isDecaf() {
-        coffee.isDecaf();
-    }
-
-    @Test
     void setDecaf() {
         coffee.setDecaf(true);
         assertTrue(coffee.isDecaf());
-    }
-
-    @Test
-    void getNumOfSugar() {
-        coffee.getNumOfSugar();
     }
 
     @Test
@@ -51,11 +36,6 @@ class CoffeeTest {
     void setNumOfSugarInvalid() {
         assertThrows(IllegalArgumentException.class, ()->
                 coffee.setNumOfSugar(7));
-    }
-
-    @Test
-    void getNumOfCream() {
-        coffee.getNumOfCream();
     }
 
     @Test

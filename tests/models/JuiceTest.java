@@ -10,15 +10,7 @@ class JuiceTest {
     }
 
     @Test
-    void getIngredients() {
-    }
-
-    @Test
     void addIngredient() {
-    }
-
-    @Test
-    void hasPulp() {
     }
 
     @Test

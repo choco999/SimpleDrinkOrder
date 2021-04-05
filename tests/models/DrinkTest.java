@@ -15,11 +15,6 @@ class DrinkTest {
     }
 
     @Test
-    void getName() {
-        drink.getName();
-    }
-
-    @Test
     void setName() {
         drink.setName("Americano");
         assertEquals("Americano", drink.getName());
@@ -35,11 +30,6 @@ class DrinkTest {
     void setNameInvalidLowerCase() {
         assertThrows(IllegalArgumentException.class, ()->
                 drink.setName("americano"));
-    }
-
-    @Test
-    void getSize() {
-        drink.getSize();
     }
 
     @Test
