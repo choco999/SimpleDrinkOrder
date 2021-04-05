@@ -23,11 +23,11 @@ public class Juice extends Drink {
 //    }
 
     public void addIngredient(String ingredient){
-        List<String> ingredients = Arrays.asList("Apple", "Orange", "Strawberry", "Pineapple", "Banana", "Lemon");
-        if(ingredients.contains(ingredient))
+        List<String> expIngredients = Arrays.asList("apple", "orange", "strawberry", "pineapple", "banana", "lemon");
+        if(expIngredients.contains(ingredient.toLowerCase()))
             ingredients.add(ingredient);
         else
-            throw new IllegalArgumentException("You must choose from " + ingredients);
+            throw new IllegalArgumentException("You must choose from " + expIngredients);
 
     }
 
