@@ -11,7 +11,7 @@ class DrinkTest {
 
     @BeforeEach
     void setUp() {
-        drink = new Drink("Iced Americano", 1);
+        drink = new Drink("Iced Americano", "Small");
     }
 
     @Test
@@ -34,19 +34,19 @@ class DrinkTest {
 
     @Test
     void setSize() {
-        drink.setSize(1);
-        assertEquals(1,drink.getSize());
+        drink.setSize("Small");
+        assertEquals("Small",drink.getSize());
     }
 
     @Test
     void setInvalidSize() {
         assertThrows(IllegalArgumentException.class, ()->
-                drink.setSize(4));
+                drink.setSize("Big"));
     }
 
     @Test
     void getCost() {
-        drink.setSize(1);
+        drink.setSize("Small");
         assertEquals(2.5, drink.getCost());
     }
 }

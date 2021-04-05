@@ -8,7 +8,7 @@ public class Juice extends Drink {
     private ArrayList<String> ingredients;
     private boolean pulp;
 
-    public Juice(String name, int size, boolean hasPulp) {
+    public Juice(String name, String size, boolean hasPulp) {
         super(name, size);
         ingredients = new ArrayList<>();
         setHasPulp(pulp);

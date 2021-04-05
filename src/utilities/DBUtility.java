@@ -9,11 +9,11 @@ public class DBUtility {
     public static ArrayList<Coffee> getCoffeeFromDB(){
         ArrayList<Coffee> cupsOfCoffee = new ArrayList<>();
 
-        cupsOfCoffee.add(new Coffee("Americano", 1, true, false, 1,2));
-        cupsOfCoffee.add(new Coffee("Affogato", 2, true, false, 2,2));
-        cupsOfCoffee.add(new Coffee("Cappuccino", 1, true, false, 3,1));
-        cupsOfCoffee.add(new Coffee("Caffe Latte", 1, false, false, 1,1));
-        cupsOfCoffee.add(new Coffee("Cold brew coffee", 3, false, true, 2,1));
+        cupsOfCoffee.add(new Coffee("Americano", "Small", true, false, 1,2));
+        cupsOfCoffee.add(new Coffee("Affogato", "Medium", true, false, 2,2));
+        cupsOfCoffee.add(new Coffee("Cappuccino", "Small", true, false, 3,1));
+        cupsOfCoffee.add(new Coffee("Caffe Latte", "Small", false, false, 1,1));
+        cupsOfCoffee.add(new Coffee("Cold brew coffee", "Large", false, true, 2,1));
 
         return cupsOfCoffee;
     }
@@ -21,10 +21,10 @@ public class DBUtility {
     public static ArrayList<Juice> getJuiceFromDB(){
         ArrayList<Juice> cupsOfJuice = new ArrayList<>();
 
-        cupsOfJuice.add(new Juice("Apple Juice",1,false));
-        cupsOfJuice.add(new Juice("Orange Juice",2,true));
-        cupsOfJuice.add(new Juice("Strawberry Juice",3,false));
-        cupsOfJuice.add(new Juice("Pineapple Juice",1,true));
+        cupsOfJuice.add(new Juice("Apple Juice","Small",false));
+        cupsOfJuice.add(new Juice("Orange Juice","Medium",true));
+        cupsOfJuice.add(new Juice("Strawberry Juice","Large",false));
+        cupsOfJuice.add(new Juice("Pineapple Juice","Small",true));
 
         return cupsOfJuice;
     }

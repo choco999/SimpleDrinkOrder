@@ -13,7 +13,7 @@ class JuiceTest {
 
     @BeforeEach
     void setUp() {
-        juice = new Juice("Apple Juice", 1, false);
+        juice = new Juice("Apple Juice", "Small", false);
     }
 
     @Test

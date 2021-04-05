@@ -11,7 +11,7 @@ class CoffeeTest {
 
     @BeforeEach
     void setUp() {
-        coffee = new Coffee("Cafe Latte", 1, true, false, 2, 2);
+        coffee = new Coffee("Cafe Latte", "Small", true, false, 2, 2);
     }
 
     @Test

@@ -1,21 +1,24 @@
 package models;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Drink {
     private String name;
-    private int size;
+    private String size;
 
-    public Drink(String name, int size) {
+    public Drink(String name, String size) {
         setName(name);
         setSize(size);
     }
 
     public double getCost(){
-        if(getSize() == 1){
+        if(getSize().equals("Small")){
             return 2.5;
         }
-        else if(getSize() == 2){
+        else if(getSize().equals("Medium")){
             return 3.5;
-        } else if(getSize() == 3){
+        } else if(getSize().equals("Large")){
             return 4.5;
         } else {
             return -1;
@@ -39,34 +42,20 @@ public class Drink {
 
     }
 
-    public int getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(int size) {
-        if(size == 1 || size == 2 || size == 3)
+    public void setSize(String size) {
+        List<String> sizes = Arrays.asList("Small", "Medium", "Large");
+        if(sizes.contains(size))
             this.size = size;
         else
-            throw new IllegalArgumentException("Size must be 1, 2, or 3");
+            throw new IllegalArgumentException("Size must be Small , Medium, or Large");
     }
 
-    public String getSizeName(int size){
-        String sizeName = "";
-        switch(size){
-            case 1:
-                sizeName = "small";
-                break;
-            case 2:
-                sizeName = "medium";
-                break;
-            case 3:
-                sizeName = "large";
-                break;
-        }
-        return sizeName;
-    }
 
     public String toString(){
-        return String.format("%s, size: %s", name, getSizeName(size));
+        return String.format("%s, size: %s", name, size);
     }
 }

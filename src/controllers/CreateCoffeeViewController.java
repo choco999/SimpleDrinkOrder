@@ -33,7 +33,7 @@ public class CreateCoffeeViewController implements Initializable {
     @FXML
     private void submitCoffee(){
         Coffee newCoffee = new Coffee(coffeeNameTextField.getText(),
-                convertSizeValue(sizeChoiceBox.getValue()),
+                sizeChoiceBox.getValue(),
                 true,
                 true,
                 2,
@@ -52,17 +52,5 @@ public class CreateCoffeeViewController implements Initializable {
         sizeChoiceBox.getItems().add("Medium");
         sizeChoiceBox.getItems().add("Large");
     }
-
-    private int convertSizeValue(String size){
-        int numOfSize = 0;
-        if(sizeChoiceBox.getValue() == "Small")
-            numOfSize = 1;
-        if(sizeChoiceBox.getValue() == "Medium")
-            numOfSize = 2;
-        if(sizeChoiceBox.getValue() == "Large")
-            numOfSize = 3;
-        return numOfSize;
-    }
-
 
 }

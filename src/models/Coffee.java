@@ -5,7 +5,7 @@ public class Coffee extends Drink {
     private boolean hot, decaf;
     private int numOfSugar, numOfCream;
 
-    public Coffee(String name, int size, boolean hot, boolean decaf, int numOfSugar, int numOfCream) {
+    public Coffee(String name, String size, boolean hot, boolean decaf, int numOfSugar, int numOfCream) {
         super(name, size);
         setHot(hot);
         setDecaf(decaf);
