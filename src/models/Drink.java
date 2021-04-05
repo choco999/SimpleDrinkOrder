@@ -54,19 +54,19 @@ public class Drink {
         String sizeName = "";
         switch(size){
             case 1:
-                sizeName = "Small";
+                sizeName = "small";
                 break;
             case 2:
-                sizeName = "Medium";
+                sizeName = "medium";
                 break;
             case 3:
-                sizeName = "Large";
+                sizeName = "large";
                 break;
         }
         return sizeName;
     }
 
     public String toString(){
-        return String.format("%s %s", name, getSizeName(size));
+        return String.format("%s, size: %s", name, getSizeName(size));
     }
 }
