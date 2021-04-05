@@ -49,4 +49,24 @@ public class Drink {
         else
             throw new IllegalArgumentException("Size must be 1, 2, or 3");
     }
+
+    public String getSizeName(int size){
+        String sizeName = "";
+        switch(size){
+            case 1:
+                sizeName = "Small";
+                break;
+            case 2:
+                sizeName = "Medium";
+                break;
+            case 3:
+                sizeName = "Large";
+                break;
+        }
+        return sizeName;
+    }
+
+    public String toString(){
+        return String.format("%s %s", name, getSizeName(size));
+    }
 }

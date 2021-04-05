@@ -14,9 +14,9 @@
 
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardViewController">
    <children>
-      <VBox prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="41.0" prefWidth="980.0" text="Simple Drink Order">
+            <Label alignment="TOP_CENTER" prefHeight="41.0" text="Simple Drink Order" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="36.0" />
                </font>
@@ -41,12 +41,12 @@
                      <children>
                         <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="273.0" spacing="15.0">
                            <children>
-                              <Label text="Coffee">
+                              <Label fx:id="coffeeLabel" text="Coffee">
                                  <font>
                                     <Font name="Calibri" size="18.0" />
                                  </font>
                               </Label>
-                              <ListView prefHeight="200.0" />
+                              <ListView fx:id="coffeeListView" prefHeight="200.0" />
                               <Button mnemonicParsing="false" text="Order Coffee">
                                  <font>
                                     <Font size="14.0" />
@@ -56,12 +56,12 @@
                         </VBox>
                         <VBox alignment="TOP_CENTER" prefHeight="238.0" prefWidth="273.0" spacing="15.0" GridPane.rowIndex="1">
                            <children>
-                              <Label text="Juice">
+                              <Label fx:id="juiceLabel" text="Juice">
                                  <font>
                                     <Font name="Calibri" size="18.0" />
                                  </font>
                               </Label>
-                              <ListView prefHeight="200.0" />
+                              <ListView fx:id="juiceListView" prefHeight="200.0" />
                               <Button mnemonicParsing="false" text="Order Juice">
                                  <font>
                                     <Font size="14.0" />
@@ -73,12 +73,12 @@
                   </GridPane>
                   <VBox alignment="TOP_CENTER" prefHeight="468.0" prefWidth="303.0" spacing="15.0" GridPane.columnIndex="1">
                      <children>
-                        <Label text="Order">
+                        <Label fx:id="orderLabel" text="Order">
                            <font>
                               <Font name="Calibri" size="18.0" />
                            </font>
                         </Label>
-                        <ListView prefHeight="386.0" />
+                        <ListView fx:id="orderListView" prefHeight="386.0" />
                         <Button mnemonicParsing="false" text="Order Coffee">
                            <font>
                               <Font size="14.0" />
