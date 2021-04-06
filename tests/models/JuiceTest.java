@@ -14,6 +14,7 @@ class JuiceTest {
     @BeforeEach
     void setUp() {
         juice = new Juice("Apple Juice", "Small", false);
+        juice.addIngredient("Apple");
     }
 
     @Test
@@ -47,4 +48,10 @@ class JuiceTest {
         juice.addIngredient("Orange");
         assertEquals(1,juice.getNumOfIngredients());
     }
+
+    @Test
+    void testToString() {
+        assertEquals("Apple Juice, size: Small, 1 ingredients",juice.toString());
+    }
+
 }
