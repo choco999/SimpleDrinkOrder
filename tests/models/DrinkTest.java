@@ -49,4 +49,9 @@ class DrinkTest {
         drink.setSize("Small");
         assertEquals(2.5, drink.getCost());
     }
+
+    @Test
+    void testToString() {
+        assertEquals("Iced Americano, size: Small",drink.toString());
+    }
 }
