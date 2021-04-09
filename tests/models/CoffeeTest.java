@@ -59,4 +59,9 @@ class CoffeeTest {
     void getBlendName() {
         assertEquals("Double Double", coffee.getBlendName());
     }
+
+    @Test
+    void testToString() {
+        assertEquals("Cafe Latte, size: Small, sugar: 2, cream: 2",coffee.toString());
+    }
 }

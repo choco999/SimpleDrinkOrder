@@ -53,9 +53,4 @@ public class Drink {
         else
             throw new IllegalArgumentException("Size must be Small , Medium, or Large");
     }
-
-
-    public String toString(){
-        return String.format("%s, size: %s", name, size);
-    }
 }

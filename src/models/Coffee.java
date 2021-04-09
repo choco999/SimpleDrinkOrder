@@ -79,9 +79,6 @@ public class Coffee extends Drink {
 
     public String getBlendName(){
 
-        ///Here is a Jaret edit
-        int sugars = 2;
-        int changes = 3;
         int numOfCream = getNumOfCream();
         int numOfSugar = getNumOfSugar();
         String coffeeName = "";
@@ -100,5 +97,7 @@ public class Coffee extends Drink {
         return coffeeName;
     }
 
-
+    public String toString(){
+        return String.format("%s, size: %s, sugar: %d, cream: %d", getName(), getSize(), numOfSugar, numOfCream);
+    }
 }
