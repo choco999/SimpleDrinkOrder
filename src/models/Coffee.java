@@ -78,6 +78,10 @@ public class Coffee extends Drink {
 ////    }
 
     public String getBlendName(){
+
+        ///Here is a Jaret edit
+        int sugars = 2;
+        int changes = 3;
         int numOfCream = getNumOfCream();
         int numOfSugar = getNumOfSugar();
         String coffeeName = "";
@@ -95,4 +99,6 @@ public class Coffee extends Drink {
             coffeeName = numOfCream + " cream " + numOfSugar + " sugar";
         return coffeeName;
     }
+
+
 }
