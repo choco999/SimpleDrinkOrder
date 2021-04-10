@@ -50,15 +50,15 @@ class CoffeeTest {
                 coffee.setNumOfSugar(-1));
     }
 
-    @Test
-    void getCalories() {
-        assertEquals(72, coffee.getCalories());
-    }
+//    @Test
+//    void getCalories() {
+//        assertEquals(72, coffee.getCalories());
+//    }
 
-    @Test
-    void getBlendName() {
-        assertEquals("Double Double", coffee.getBlendName());
-    }
+//    @Test
+//    void getBlendName() {
+//        assertEquals("Double Double", coffee.getBlendName());
+//    }
 
     @Test
     void testToString() {
