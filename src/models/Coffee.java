@@ -51,51 +51,34 @@ public class Coffee extends Drink {
             throw new IllegalArgumentException("The number of cream must be 0 - 4");
     }
 
-    public double getCalories(){
-        int numOfSugar = getNumOfSugar();
-        int numOfCream = getNumOfCream();
-        int calorieOfOneSugar = 16;
-        int calorieOfOneCream = 20;
+//    public double getCalories(){
+//        int numOfSugar = getNumOfSugar();
+//        int numOfCream = getNumOfCream();
+//        int calorieOfOneSugar = 16;
+//        int calorieOfOneCream = 20;
+//
+//        return numOfSugar * calorieOfOneSugar + numOfCream * calorieOfOneCream;
+//    }
 
-        return numOfSugar * calorieOfOneSugar + numOfCream * calorieOfOneCream;
-    }
-
-//    public String getBlendName(int numOfCream,int numOfSugar){
-////        String coffeeName = "";
-////        if(numOfCream == 0 && numOfSugar == 0)
-////            coffeeName = "Black";
-////        else if(numOfCream == 1 && numOfSugar == 1)
-////            coffeeName = "Regular";
-////        else if(numOfCream == 2 && numOfSugar == 2)
-////            coffeeName = "Double Double";
-////        else if(numOfCream == 3 && numOfSugar == 3)
-////            coffeeName = "Triple Triple";
-////        else if(numOfCream == 4 && numOfSugar == 4)
-////            coffeeName = "Four by Four";
-////        else
-////            coffeeName = numOfCream + " cream " + numOfSugar + " sugar";
-////        return coffeeName;
-////    }
-
-    public String getBlendName(){
-
-        int numOfCream = getNumOfCream();
-        int numOfSugar = getNumOfSugar();
-        String coffeeName = "";
-        if(numOfCream == 0 && numOfSugar == 0)
-            coffeeName = "Black";
-        else if(numOfCream == 1 && numOfSugar == 1)
-            coffeeName = "Regular";
-        else if(numOfCream == 2 && numOfSugar == 2)
-            coffeeName = "Double Double";
-        else if(numOfCream == 3 && numOfSugar == 3)
-            coffeeName = "Triple Triple";
-        else if(numOfCream == 4 && numOfSugar == 4)
-            coffeeName = "Four by Four";
-        else
-            coffeeName = numOfCream + " cream " + numOfSugar + " sugar";
-        return coffeeName;
-    }
+//    public String getBlendName(){
+//
+//        int numOfCream = getNumOfCream();
+//        int numOfSugar = getNumOfSugar();
+//        String coffeeName = "";
+//        if(numOfCream == 0 && numOfSugar == 0)
+//            coffeeName = "Black";
+//        else if(numOfCream == 1 && numOfSugar == 1)
+//            coffeeName = "Regular";
+//        else if(numOfCream == 2 && numOfSugar == 2)
+//            coffeeName = "Double Double";
+//        else if(numOfCream == 3 && numOfSugar == 3)
+//            coffeeName = "Triple Triple";
+//        else if(numOfCream == 4 && numOfSugar == 4)
+//            coffeeName = "Four by Four";
+//        else
+//            coffeeName = numOfCream + " cream " + numOfSugar + " sugar";
+//        return coffeeName;
+//    }
 
     public String toString(){
         return String.format("%s, size: %s, sugar: %d, cream: %d", getName(), getSize(), numOfSugar, numOfCream);

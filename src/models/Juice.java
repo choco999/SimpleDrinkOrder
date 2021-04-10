@@ -18,10 +18,6 @@ public class Juice extends Drink {
         return ingredients;
     }
 
-//    public void setIngredients(ArrayList<String> ingredients) {
-//        this.ingredients = ingredients;
-//    }
-
     public void addIngredient(String ingredient){
         List<String> expIngredients = Arrays.asList("apple", "orange", "strawberry", "pineapple", "banana", "lemon");
         if(expIngredients.contains(ingredient.toLowerCase()))

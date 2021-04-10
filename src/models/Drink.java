@@ -53,4 +53,9 @@ public class Drink {
         else
             throw new IllegalArgumentException("Size must be Small , Medium, or Large");
     }
+
+    // placeholder
+    public String toString(){
+        return "";
+    }
 }

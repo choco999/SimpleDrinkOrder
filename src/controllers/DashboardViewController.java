@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import models.Coffee;
 import models.Juice;
 import models.Order;
@@ -33,7 +34,13 @@ public class DashboardViewController implements Initializable {
     private Label orderLabel;
 
     @FXML
+    private TextField nameTextField;
+
+    @FXML
     private ListView<Order> orderListView;
+
+    @FXML
+    private Label orderDetails;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -46,17 +53,12 @@ public class DashboardViewController implements Initializable {
 
         orderListView.getItems().addAll(DBUtility.getOrderFromDB());
         orderLabel.setText(String.format("Order: %d", orderListView.getItems().size()));
+
+
     }
 
     @FXML
     private void orderCoffeeButton(ActionEvent event) throws IOException {
-//        Coffee newCoffee = new Coffee("Abc", "Medium", true,true,2, 2);
-//        DBUtility.insertCoffeeIntoDB(newCoffee);
-//
-//        coffeeListView.getItems().addAll(DBUtility.getCoffeeFromDB());
-//        coffeeLabel.setText(String.format("Coffee: %d", coffeeListView.getItems().size()));
-
-
         SceneChanger.changeScenes(event, "../views/createCoffeeView.fxml", "Order Coffee");
     }
 
@@ -66,8 +68,47 @@ public class DashboardViewController implements Initializable {
     }
 
     @FXML
-    private void orderButton(ActionEvent event) throws IOException {
-        SceneChanger.changeScenes(event, "../views/createOrderView.fxml", "Order");
+    void addCoffeeToOrder(ActionEvent event) {
+         if (coffeeListView.getSelectionModel().getSelectedItem() != null)
+         {
+             if(orderListView.getSelectionModel().getSelectedItem() != null){
+                 orderListView.getSelectionModel().getSelectedItem().addOrder(coffeeListView.getSelectionModel().getSelectedItem());
+                 orderListView.getItems().setAll(DBUtility.getOrderFromDB());
+                 orderLabel.setText(String.format("Order: %d", orderListView.getItems().size()));
+             }
+         }
+    }
+
+    @FXML
+    void addJuiceToOrder(ActionEvent event) {
+        if (juiceListView.getSelectionModel().getSelectedItem() != null)
+        {
+            if(orderListView.getSelectionModel().getSelectedItem() != null){
+                orderListView.getSelectionModel().getSelectedItem().addOrder(juiceListView.getSelectionModel().getSelectedItem());
+                orderListView.getItems().setAll(DBUtility.getOrderFromDB());
+                orderLabel.setText(String.format("Order: %d", orderListView.getItems().size()));
+            }
+        }
+    }
+
+    @FXML
+    private void orderButton(ActionEvent event) {
+        if(!nameTextField.getText().isEmpty()){
+            Order order1 = new Order(nameTextField.getText());
+            DBUtility.insertOrderIntoDB(order1);
+
+            orderListView.getItems().setAll(DBUtility.getOrderFromDB());
+            orderLabel.setText(String.format("Order: %d", orderListView.getItems().size()));
+
+            nameTextField.clear();
+        }
+    }
+
+    @FXML
+    private void viewOrder(ActionEvent event){
+        if (orderListView.getSelectionModel().getSelectedItem() != null){
+            orderDetails.setText(orderListView.getSelectionModel().getSelectedItem().getDetails());
+        }
     }
 
 

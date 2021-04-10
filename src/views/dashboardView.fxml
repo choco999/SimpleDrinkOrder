@@ -4,9 +4,11 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -38,11 +40,20 @@
                            </font>
                         </Label>
                         <ListView fx:id="coffeeListView" prefHeight="200.0" />
-                        <Button mnemonicParsing="false" onAction="#orderCoffeeButton" text="Order Coffee">
-                           <font>
-                              <Font name="Calibri" size="16.0" />
-                           </font>
-                        </Button>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#orderCoffeeButton" prefHeight="38.0" prefWidth="101.0" text="Add Coffee">
+                                 <font>
+                                    <Font name="Calibri" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addCoffeeToOrder" prefHeight="37.0" prefWidth="118.0" text="Add to Order">
+                                 <font>
+                                    <Font name="Calibri" size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                   <VBox alignment="TOP_CENTER" spacing="10.0" GridPane.rowIndex="1">
@@ -53,11 +64,20 @@
                            </font>
                         </Label>
                         <ListView fx:id="juiceListView" prefHeight="200.0" />
-                        <Button mnemonicParsing="false" onAction="#orderJuiceButton" text="Order Juice">
-                           <font>
-                              <Font name="Calibri" size="16.0" />
-                           </font>
-                        </Button>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#orderJuiceButton" prefHeight="35.0" prefWidth="88.0" text="Add Juice">
+                                 <font>
+                                    <Font name="Calibri" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#addJuiceToOrder" prefHeight="33.0" prefWidth="118.0" text="Add to Order">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
                   <VBox alignment="TOP_CENTER" spacing="10.0" GridPane.columnIndex="1">
@@ -68,13 +88,33 @@
                            </font>
                         </Label>
                         <ListView fx:id="orderListView" prefHeight="200.0" />
-                        <Button mnemonicParsing="false" onAction="#orderButton" text="Create Order">
-                           <font>
-                              <Font name="Calibri" size="16.0" />
-                           </font>
-                        </Button>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0">
+                           <children>
+                              <VBox prefHeight="51.0" prefWidth="132.0">
+                                 <children>
+                                    <Label text="Name" />
+                                    <TextField fx:id="nameTextField" prefHeight="25.0" prefWidth="164.0" />
+                                 </children>
+                              </VBox>
+                              <Button mnemonicParsing="false" onAction="#orderButton" prefHeight="34.0" prefWidth="110.0" text="Create Order">
+                                 <font>
+                                    <Font name="Calibri" size="16.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#viewOrder" prefHeight="33.0" prefWidth="87.0" text="View Order">
+                                 <font>
+                                    <Font name="Calibri" size="14.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children>
                   </VBox>
+                  <Label fx:id="orderDetails" prefHeight="140.0" prefWidth="244.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Calibri" size="14.0" />
+                     </font>
+                  </Label>
                </children>
             </GridPane>
          </children>
