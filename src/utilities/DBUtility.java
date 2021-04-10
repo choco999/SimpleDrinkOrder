@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class DBUtility {
     private static ArrayList<Coffee> cupsOfCoffee;
+
     public static ArrayList<Coffee> getCoffeeFromDB(){
         cupsOfCoffee = new ArrayList<>();
 
@@ -20,12 +21,22 @@ public class DBUtility {
     }
 
     public static ArrayList<Juice> getJuiceFromDB(){
+
         ArrayList<Juice> cupsOfJuice = new ArrayList<>();
 
-        cupsOfJuice.add(new Juice("Apple Juice","Small",false));
-        cupsOfJuice.add(new Juice("Orange Juice","Medium",true));
-        cupsOfJuice.add(new Juice("Strawberry Juice","Large",false));
-        cupsOfJuice.add(new Juice("Pineapple Juice","Small",true));
+        Juice juice1 = new Juice("Apple Juice","Small",false);
+        Juice juice2 = new Juice("Strawberry Juice","Large",false);
+        Juice juice3 = new Juice("Pineapple Juice","Small",true);
+
+        cupsOfJuice.add(juice1);
+        juice1.addIngredient("apple");
+
+        cupsOfJuice.add(juice2);
+        juice2.addIngredient("lemon");
+        juice2.addIngredient("orange");
+
+        cupsOfJuice.add(juice3);
+        juice3.addIngredient("pineapple");
 
         return cupsOfJuice;
     }
@@ -34,4 +45,6 @@ public class DBUtility {
         //getCoffeeFromDB();
         cupsOfCoffee.add(newCoffee);
     }
+
+
 }

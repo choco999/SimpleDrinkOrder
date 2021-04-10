@@ -50,8 +50,8 @@ public class DashboardViewController implements Initializable {
     }
 
     @FXML
-    private void orderJuiceButton(ActionEvent event){
-
+    private void orderJuiceButton(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event, "../views/createJuiceView.fxml", "Order Juice");
     }
 
 
