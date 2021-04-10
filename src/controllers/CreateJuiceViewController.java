@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import models.Juice;
+import utilities.DBUtility;
 import utilities.SceneChanger;
 
 import java.io.IOException;
@@ -71,10 +72,13 @@ public class CreateJuiceViewController implements Initializable {
                 newJuice.addIngredient("strawberry");
             if(pineappleCheckBox.isSelected())
                 newJuice.addIngredient("pineapple");
+            if(bananaCheckBox.isSelected())
+                newJuice.addIngredient("banana");
             if(lemonCheckBox.isSelected())
                 newJuice.addIngredient("lemon");
 
             msgLabel.setText(newJuice.toString());
+            DBUtility.insertJuiceIntoDB(newJuice);
 
         } catch(IllegalArgumentException e){
             msgLabel.setText(e.getMessage());

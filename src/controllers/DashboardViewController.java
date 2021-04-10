@@ -50,6 +50,13 @@ public class DashboardViewController implements Initializable {
 
     @FXML
     private void orderCoffeeButton(ActionEvent event) throws IOException {
+//        Coffee newCoffee = new Coffee("Abc", "Medium", true,true,2, 2);
+//        DBUtility.insertCoffeeIntoDB(newCoffee);
+//
+//        coffeeListView.getItems().addAll(DBUtility.getCoffeeFromDB());
+//        coffeeLabel.setText(String.format("Coffee: %d", coffeeListView.getItems().size()));
+
+
         SceneChanger.changeScenes(event, "../views/createCoffeeView.fxml", "Order Coffee");
     }
 
@@ -58,7 +65,10 @@ public class DashboardViewController implements Initializable {
         SceneChanger.changeScenes(event, "../views/createJuiceView.fxml", "Order Juice");
     }
 
-
+    @FXML
+    private void orderButton(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event, "../views/createOrderView.fxml", "Order");
+    }
 
 
 

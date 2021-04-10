@@ -16,7 +16,7 @@ class OrderTest {
     void setUp() {
         order = new Order("Chisato");
         drink1 = new Drink("Iced Americano", "Small");
-        drink1 = new Drink("Cafe Latte", "Medium");
+        drink2 = new Drink("Cafe Latte", "Medium");
         order.addOrder(drink1);
         order.addOrder(drink2);
     }
@@ -55,13 +55,13 @@ class OrderTest {
         assertEquals(2,order.getNumOfDrinks());
     }
 
-    @Test
-    void testToString() {
-        assertEquals("Order Number: 1, Chisato, 2 drinks", order.toString());
-    }
-
 //    @Test
 //    void testToString() {
-//        assertEquals("Order Number: 1, Chisato, 2 drinks, total cost: 6.0", order.toString());
+//        assertEquals("Order Number: 1, Chisato, 2 drinks", order.toString());
 //    }
+
+    @Test
+    void testToString() {
+        assertEquals("Order Number: 1, Chisato, 2 drinks, total cost: $6.0", order.toString());
+    }
 }

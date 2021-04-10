@@ -68,7 +68,7 @@
                            </font>
                         </Label>
                         <ListView fx:id="orderListView" prefHeight="200.0" />
-                        <Button mnemonicParsing="false" text="Create Order">
+                        <Button mnemonicParsing="false" onAction="#orderButton" text="Create Order">
                            <font>
                               <Font name="Calibri" size="16.0" />
                            </font>

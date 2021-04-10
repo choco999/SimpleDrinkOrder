@@ -55,11 +55,11 @@ public class Order {
         return orders.size();
     }
 
-    public String toString(){
-        return String.format("Order Number: %d, %s, %d drinks", orderNumber, name, getNumOfDrinks());
-    }
-
 //    public String toString(){
-//        return String.format("Order Number: %d, %s, %d drinks, total cost: $%.1f", orderNumber, name, getNumOfDrinks(), calculateCost());
+//        return String.format("Order Number: %d, %s, %d drinks", orderNumber, name, getNumOfDrinks());
 //    }
+
+    public String toString(){
+        return String.format("Order Number: %d, %s, %d drinks, total cost: $%.1f", orderNumber, name, getNumOfDrinks(), calculateCost());
+    }
 }
