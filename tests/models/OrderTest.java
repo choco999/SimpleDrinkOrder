@@ -55,10 +55,10 @@ class OrderTest {
         assertEquals(2,order.getNumOfDrinks());
     }
 
-//    @Test
-//    void testToString() {
-//        assertEquals("Order Number: 1, Chisato, 2 drinks", order.toString());
-//    }
+    @Test
+    void getDetails(){
+        assertEquals("\n\n", order.getDetails());
+    }
 
     @Test
     void testToString() {
