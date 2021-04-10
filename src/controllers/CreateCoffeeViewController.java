@@ -3,10 +3,7 @@ package controllers;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import models.Coffee;
 import utilities.DBUtility;
 import utilities.SceneChanger;
@@ -38,6 +35,7 @@ public class CreateCoffeeViewController implements Initializable {
     @FXML
     private Label msgLabel;
 
+
     @FXML
     private void submitCoffee(){
         try {
@@ -52,6 +50,7 @@ public class CreateCoffeeViewController implements Initializable {
             msgLabel.setText(newCoffee.toString());
 
             DBUtility.insertCoffeeIntoDB(newCoffee);
+
 
         } catch(IllegalArgumentException e){
             msgLabel.setText(e.getMessage());

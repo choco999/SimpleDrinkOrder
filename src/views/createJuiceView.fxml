@@ -13,12 +13,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.CreateJuiceViewController">
    <children>
       <VBox alignment="TOP_CENTER" layoutX="10.0" layoutY="-4.0" prefHeight="606.0" prefWidth="821.0" spacing="30.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="TOP_CENTER" prefHeight="41.0" text="Simple Drink Order" textAlignment="CENTER">
+            <Label alignment="TOP_CENTER" prefHeight="41.0" text="Order Juice" textAlignment="CENTER">
                <font>
                   <Font name="Calibri Bold" size="36.0" />
                </font>

@@ -58,4 +58,8 @@ public class Order {
     public String toString(){
         return String.format("Order Number: %d, %s, %d drinks", orderNumber, name, getNumOfDrinks());
     }
+
+//    public String toString(){
+//        return String.format("Order Number: %d, %s, %d drinks, total cost: $%.1f", orderNumber, name, getNumOfDrinks(), calculateCost());
+//    }
 }

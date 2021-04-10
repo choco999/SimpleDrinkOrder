@@ -7,6 +7,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import models.Coffee;
 import models.Juice;
+import models.Order;
 import utilities.DBUtility;
 import utilities.SceneChanger;
 
@@ -31,8 +32,8 @@ public class DashboardViewController implements Initializable {
     @FXML
     private Label orderLabel;
 
-//    @FXML
-//    private ListView<Order> orderListView;
+    @FXML
+    private ListView<Order> orderListView;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -42,6 +43,9 @@ public class DashboardViewController implements Initializable {
 
         juiceListView.getItems().addAll(DBUtility.getJuiceFromDB());
         juiceLabel.setText(String.format("Juice: %d",juiceListView.getItems().size()));
+
+        orderListView.getItems().addAll(DBUtility.getOrderFromDB());
+        orderLabel.setText(String.format("Order: %d", orderListView.getItems().size()));
     }
 
     @FXML
@@ -53,6 +57,8 @@ public class DashboardViewController implements Initializable {
     private void orderJuiceButton(ActionEvent event) throws IOException {
         SceneChanger.changeScenes(event, "../views/createJuiceView.fxml", "Order Juice");
     }
+
+
 
 
 

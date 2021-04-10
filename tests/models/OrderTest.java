@@ -59,4 +59,9 @@ class OrderTest {
     void testToString() {
         assertEquals("Order Number: 1, Chisato, 2 drinks", order.toString());
     }
+
+//    @Test
+//    void testToString() {
+//        assertEquals("Order Number: 1, Chisato, 2 drinks, total cost: 6.0", order.toString());
+//    }
 }
