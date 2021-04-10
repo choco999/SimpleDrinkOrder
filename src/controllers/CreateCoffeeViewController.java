@@ -1,5 +1,6 @@
 package controllers;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.CheckBox;
@@ -7,7 +8,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import models.Coffee;
+import utilities.DBUtility;
+import utilities.SceneChanger;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -44,11 +48,20 @@ public class CreateCoffeeViewController implements Initializable {
                     getValueOfSugarCheckBox(sugarChoiceBox.getValue()),
                     getValueOfCreamCheckBox(creamChoiceBox.getValue()));
 
+
             msgLabel.setText(newCoffee.toString());
+
+            DBUtility.insertCoffeeIntoDB(newCoffee);
+
         } catch(IllegalArgumentException e){
             msgLabel.setText(e.getMessage());
         }
 
+    }
+
+    @FXML
+    private void returnToDashboard(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event,"../views/dashboardView.fxml","Simple Drink Order Dashboard");
     }
 
     private boolean getValueOfDecafCheckBox(String text){

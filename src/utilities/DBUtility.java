@@ -6,8 +6,9 @@ import models.Juice;
 import java.util.ArrayList;
 
 public class DBUtility {
+    private static ArrayList<Coffee> cupsOfCoffee;
     public static ArrayList<Coffee> getCoffeeFromDB(){
-        ArrayList<Coffee> cupsOfCoffee = new ArrayList<>();
+        cupsOfCoffee = new ArrayList<>();
 
         cupsOfCoffee.add(new Coffee("Americano", "Small", true, false, 1,2));
         cupsOfCoffee.add(new Coffee("Affogato", "Medium", true, false, 2,2));
@@ -27,5 +28,10 @@ public class DBUtility {
         cupsOfJuice.add(new Juice("Pineapple Juice","Small",true));
 
         return cupsOfJuice;
+    }
+
+    public static void insertCoffeeIntoDB(Coffee newCoffee){
+        //getCoffeeFromDB();
+        cupsOfCoffee.add(newCoffee);
     }
 }

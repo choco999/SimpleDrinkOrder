@@ -53,7 +53,7 @@
                            </font>
                         </Label>
                         <ListView fx:id="juiceListView" prefHeight="200.0" />
-                        <Button mnemonicParsing="false" text="Order Juice">
+                        <Button mnemonicParsing="false" onAction="#orderJuiceButton" text="Order Juice">
                            <font>
                               <Font name="Calibri" size="16.0" />
                            </font>
