@@ -80,6 +80,7 @@ public class Coffee extends Drink {
 //        return coffeeName;
 //    }
 
+    @Override
     public String toString(){
         return String.format("%s, size: %s, sugar: %d, cream: %d", getName(), getSize(), numOfSugar, numOfCream);
     }

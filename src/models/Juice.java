@@ -39,6 +39,7 @@ public class Juice extends Drink {
         return ingredients.size();
     }
 
+    @Override
     public String toString(){
         return String.format("%s, size: %s, %d ingredients, %s", getName(), getSize(), getNumOfIngredients(), getIngredients());
     }
