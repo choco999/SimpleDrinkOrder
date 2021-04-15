@@ -34,9 +34,9 @@ class OrderTest {
     }
 
     @Test
-    void setNameInvalidLowerCase() {
+    void setNameInvalidCharacter() {
         assertThrows(IllegalArgumentException.class, ()->
-                order.setName("tom"));
+                order.setName("-"));
     }
 
     @Test
@@ -62,6 +62,6 @@ class OrderTest {
 
     @Test
     void testToString() {
-        assertEquals("Order Number: 1, Chisato, 2 drinks, total cost: $6.0", order.toString());
+        assertEquals("Order Number: 4, Chisato, 2 drinks, total cost: $6.0", order.toString());
     }
 }

@@ -19,7 +19,7 @@ class JuiceTest {
 
     @Test
     void addIngredient() {
-        juice.addIngredient("Apple");
+        //juice.addIngredient("Apple");
         ArrayList<String> expResult = new ArrayList<>();
         expResult.add("Apple");
         assertEquals(expResult, juice.getIngredients());
@@ -46,7 +46,7 @@ class JuiceTest {
     @Test
     void getNumOfIngredients() {
         juice.addIngredient("Orange");
-        assertEquals(1,juice.getNumOfIngredients());
+        assertEquals(2,juice.getNumOfIngredients());
     }
 
     @Test
