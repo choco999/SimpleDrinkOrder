@@ -40,7 +40,7 @@ public class Juice extends Drink {
     }
 
     public String toString(){
-        return String.format("%s, size: %s, %d ingredients", getName(), getSize(), getNumOfIngredients());
+        return String.format("%s, size: %s, %d ingredients, %s", getName(), getSize(), getNumOfIngredients(), getIngredients());
     }
 
 }

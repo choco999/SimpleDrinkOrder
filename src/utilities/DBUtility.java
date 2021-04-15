@@ -41,7 +41,7 @@ public class DBUtility {
             juice1.addIngredient("apple");
 
             cupsOfJuice.add(juice2);
-            juice2.addIngredient("lemon");
+            juice2.addIngredient("strawberry");
             juice2.addIngredient("orange");
 
             cupsOfJuice.add(juice3);

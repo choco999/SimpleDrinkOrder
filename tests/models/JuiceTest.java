@@ -51,7 +51,7 @@ class JuiceTest {
 
     @Test
     void testToString() {
-        assertEquals("Apple Juice, size: Small, 1 ingredients",juice.toString());
+        assertEquals("Apple Juice, size: Small, 1 ingredients, [Apple]",juice.toString());
     }
 
 }
